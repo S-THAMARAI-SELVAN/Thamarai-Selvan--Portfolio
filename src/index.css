@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Clean GitHub/Vercel minimal card classes */
+.gh-card {
+  @apply border transition-all duration-200 rounded-xl;
+}
+
+.gh-card-dark {
+  background-color: #161B22;
+  border-color: #30363D;
+}
+
+.gh-card-light {
+  background-color: #FFFFFF;
+  border-color: #D0D7DE;
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04);
+}
+
+/* Scrollbar styling matched to GitHub aesthetics */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #30363D;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8B949E;
+}
+
+/* Light mode scrollbar overrides */
+.light ::-webkit-scrollbar-thumb {
+  background-color: #D0D7DE;
+}
+.light ::-webkit-scrollbar-thumb:hover {
+  background-color: #57606A;
+}
+
+/* Custom typing cursor */
+.typing-cursor {
+  border-right: 2px solid currentColor;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+html {
+  scrollbar-gutter: stable;
+}
